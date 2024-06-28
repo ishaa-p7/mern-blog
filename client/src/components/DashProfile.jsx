@@ -23,9 +23,6 @@ import { useDispatch } from 'react-redux';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 
-
-
-
 function DashProfile() {
     const {currentUser}=useSelector(state=>state.user);
     const [imageFile, setImageFile] = useState(null);
