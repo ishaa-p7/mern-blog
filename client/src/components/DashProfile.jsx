@@ -30,6 +30,7 @@ function DashProfile() {
     const [imageFileUploading, setImageFileUploading] = useState(false);
     const [imageFileUploadProgress, setImageFileUploadProgress] = useState(null);
     const [imageFileUploadError, setImageFileUploadError] = useState(null);
+      const [formData, setFormData] = useState({});
     const filePickerRef = useRef();
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -38,6 +39,7 @@ function DashProfile() {
           setImageFileUrl(URL.createObjectURL(file));
         }
       };
+      console.log(imageFile);
       useEffect(() => {
         if (imageFile) {
           uploadImage();
@@ -83,34 +85,14 @@ function DashProfile() {
         <h1 className='my-7 text-centr font-semibold text-3xl'>Profile</h1>
         <form className='flex flex-col gap-4'>
         <input
-          type='file'
+          type="file"
           accept='image/*'
           onChange={handleImageChange}
           ref={filePickerRef}
           hidden
         />
             <div className='w-32 h-32 self-center cursor-pointer shadow-md overflow-hidden rounded-full'  onClick={() => filePickerRef.current.click()}>
-            {imageFileUploadProgress && (
-            <CircularProgressbar
-              value={imageFileUploadProgress || 0}
-              text={`${imageFileUploadProgress}%`}
-              strokeWidth={5}
-              styles={{
-                root: {
-                  width: '100%',
-                  height: '100%',
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                },
-                path: {
-                  stroke: `rgba(62, 152, 199, ${
-                    imageFileUploadProgress / 100
-                  })`,
-                },
-              }}
-            />
-          )}
+            
             <img
             src={imageFileUrl || currentUser.profilePicture}
             alt='user'
