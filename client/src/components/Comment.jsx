@@ -30,6 +30,8 @@ export default function Comment({ comment, onLike, onEdit, onDelete }) {
     setEditedContent(comment.content);
   };
 
+
+  
   const handleSave = async () => {
     try {
       const res = await fetch(`/api/comment/editComment/${comment._id}`, {
@@ -119,13 +121,22 @@ export default function Comment({ comment, onLike, onEdit, onDelete }) {
         {currentUser &&
           (currentUser._id === comment.userId || currentUser.isAdmin) && (
             
-              <button
-                type='button'
-                onClick={handleEdit}
-                className='text-gray-400 hover:text-blue-500'
-              >
-                Edit
-              </button>
+            <>
+            <button
+              type='button'
+              onClick={handleEdit}
+              className='text-gray-400 hover:text-blue-500'
+            >
+              Edit
+            </button>
+            <button
+              type='button'
+              onClick={() => onDelete(comment._id)}
+              className='text-gray-400 hover:text-red-500'
+            >
+              Delete
+            </button>
+          </>
        )
         }
         </div>
