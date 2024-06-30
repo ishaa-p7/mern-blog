@@ -5,13 +5,13 @@ import {  BsInstagram, BsTwitter, BsGithub } from 'react-icons/bs';
 
 export default function FooterCom() {
   return (
-    <Footer container classsName='border border-t-8 border-teal-500'>
+    <Footer container classsName="border border-t-8 border-teal-400">
         <div className='w-full max-w-7xl mx-auto'>
             <div className='grid w-full justify-between sm:flex md:grid-cols-1'>
                 <div className='mt-5'>
                 <Link to="/" className='self-center whitespace-nowrap text-sm
 sm:text-xl font-semibold dark:text-white'>
-<span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+<span className='px-2 py-1 bg-gradient-to-r  from-red-500 via-red-500 to-pink-600
 rounded-lg text-white'>Isha's</span>
 Blog
 </Link>

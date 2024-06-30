@@ -18,7 +18,7 @@ const postSchema = new mongoose.Schema(
     image: {
       type: String,
       default:
-        'https://wp-bn.salesforce.com/ca/blog/wp-content/uploads/sites/12/2023/10/anatomy-of-a-blog-post-deconstructed-open-graph.jpg',
+        'https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png',
     },
     category: {
       type: String,

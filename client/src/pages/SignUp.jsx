@@ -47,7 +47,7 @@ catch(error){
       <div className='flex-1'>
       <Link to="/" className='
  font-bold dark:text-white text-4xl'>
-<span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+<span className='px-2 py-1 bg-gradient-to-r  from-red-500 via-red-500 to-pink-600
 rounded-lg text-white'>Isha's</span>
 Blog
 </Link>
@@ -78,7 +78,7 @@ Blog
             placeholder='Password'
             id='password'onChange ={handleChange}/>
           </div>
-          <Button gradientDuoTone='purpleToPink' type='submit' disabled={loading}>
+          <Button gradientDuoTone='purpleToBlue' type='submit' disabled={loading}>
             {
               loading?(
                 <>
